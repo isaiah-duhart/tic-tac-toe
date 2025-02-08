@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #222;
+    --secondary-color: #fff;
+}
+
+body {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+    width: max(33%, 500px);
+    aspect-ratio: 1 / 1;
+
+    .square {
+        border: 2px solid var(--secondary-color);
+        background-color: #292828;
+        border-radius: 10px;
+        color: var(--secondary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .square:hover {
+        background-color: #505050;
+    }
+}
